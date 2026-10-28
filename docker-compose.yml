@@ -1,0 +1,109 @@
+services:
+  registry:
+    build: ./service-registry
+    ports: ["8761:8761"]
+  auth-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: auth_db}
+    volumes: ["auth_db:/var/lib/postgresql/data"]
+  auth-service:
+    build: ./auth-service
+    environment: {DB_URL: "jdbc:postgresql://auth-db:5432/auth_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [auth-db, registry]
+  student-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: student_db}
+    volumes: ["student_db:/var/lib/postgresql/data"]
+  student-service:
+    build: ./student-service
+    environment: {DB_URL: "jdbc:postgresql://student-db:5432/student_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [student-db, registry]
+  billing-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: billing_db}
+    volumes: ["billing_db:/var/lib/postgresql/data"]
+  billing-service:
+    build: ./billing-service
+    environment: {DB_URL: "jdbc:postgresql://billing-db:5432/billing_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [billing-db, registry]
+  learning-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: learning_db}
+    volumes: ["learning_db:/var/lib/postgresql/data"]
+  learning-service:
+    build: ./learning-service
+    environment: {DB_URL: "jdbc:postgresql://learning-db:5432/learning_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [learning-db, registry]
+  roadmap-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: roadmap_db}
+    volumes: ["roadmap_db:/var/lib/postgresql/data"]
+  roadmap-service:
+    build: ./roadmap-service
+    environment: {DB_URL: "jdbc:postgresql://roadmap-db:5432/roadmap_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [roadmap-db, registry]
+  assessment-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: assessment_db}
+    volumes: ["assessment_db:/var/lib/postgresql/data"]
+  assessment-service:
+    build: ./assessment-service
+    environment: {DB_URL: "jdbc:postgresql://assessment-db:5432/assessment_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [assessment-db, registry]
+  interview-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: interview_db}
+    volumes: ["interview_db:/var/lib/postgresql/data"]
+  interview-service:
+    build: ./interview-service
+    environment: {DB_URL: "jdbc:postgresql://interview-db:5432/interview_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [interview-db, registry]
+  project-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: project_db}
+    volumes: ["project_db:/var/lib/postgresql/data"]
+  project-service:
+    build: ./project-service
+    environment: {DB_URL: "jdbc:postgresql://project-db:5432/project_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [project-db, registry]
+  placement-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: placement_db}
+    volumes: ["placement_db:/var/lib/postgresql/data"]
+  placement-service:
+    build: ./placement-service
+    environment: {DB_URL: "jdbc:postgresql://placement-db:5432/placement_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [placement-db, registry]
+  notification-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: notification_db}
+    volumes: ["notification_db:/var/lib/postgresql/data"]
+  notification-service:
+    build: ./notification-service
+    environment: {DB_URL: "jdbc:postgresql://notification-db:5432/notification_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [notification-db, registry]
+  admin-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: launch, POSTGRES_PASSWORD: launchdev, POSTGRES_DB: admin_db}
+    volumes: ["admin_db:/var/lib/postgresql/data"]
+  admin-service:
+    build: ./admin-service
+    environment: {DB_URL: "jdbc:postgresql://admin-db:5432/admin_db", DB_USER: launch, DB_PASSWORD: launchdev, EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [admin-db, registry]
+  gateway:
+    build: ./api-gateway
+    ports: ["8080:8080"]
+    environment: {EUREKA_URL: "http://registry:8761/eureka"}
+    depends_on: [registry]
+volumes:
+  auth_db: {}
+  student_db: {}
+  billing_db: {}
+  learning_db: {}
+  roadmap_db: {}
+  assessment_db: {}
+  interview_db: {}
+  project_db: {}
+  placement_db: {}
+  notification_db: {}
+  admin_db: {}

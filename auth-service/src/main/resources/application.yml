@@ -1,0 +1,60 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: SamRad26@@$$
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: adityakakde11@gmail.com
+    password: vrvj ukph xyml bvyu
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+
+          starttls:
+            enable: true
+
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+eureka:
+  client:
+    enabled: false
+    register-with-eureka: false
+    fetch-registry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+launch:
+  jwt:
+    secret: bGF1bmNoLXN1cGVyLXNlY3VyZS1qd3Qta2V5LTIwMjYtMTIzNDU2Nzg5
+    expiration-seconds: 3600
+
+  frontend-origin: http://localhost:5173

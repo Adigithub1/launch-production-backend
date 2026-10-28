@@ -1,0 +1,938 @@
+{
+  "version": 1,
+  "foundationCourses": [
+    {
+      "nodeKey": "foundation-quantitative-aptitude",
+      "title": "Quantitative Aptitude",
+      "category": "Placement Foundation",
+      "durationMinutes": 180,
+      "difficulty": "FOUNDATION"
+    },
+    {
+      "nodeKey": "foundation-logical-reasoning",
+      "title": "Logical Reasoning",
+      "category": "Placement Foundation",
+      "durationMinutes": 240,
+      "difficulty": "FOUNDATION"
+    },
+    {
+      "nodeKey": "foundation-verbal-ability",
+      "title": "Verbal Ability",
+      "category": "Placement Foundation",
+      "durationMinutes": 300,
+      "difficulty": "FOUNDATION"
+    },
+    {
+      "nodeKey": "foundation-communication",
+      "title": "Professional Communication",
+      "category": "Career Foundation",
+      "durationMinutes": 180,
+      "difficulty": "FOUNDATION"
+    }
+  ],
+  "roadmaps": {
+    "electrical-design-engineer": {
+      "faculty": "Engineering",
+      "branch": "Electrical Engineering",
+      "targetRole": "Electrical Design Engineer",
+      "courses": [
+        {
+          "nodeKey": "circuit-analysis",
+          "title": "Circuit Analysis",
+          "category": "Electrical Core",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "electrical-machines",
+          "title": "Electrical Machines",
+          "category": "Electrical Core",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "power-systems",
+          "title": "Power Systems",
+          "category": "Electrical Core",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "protection-systems",
+          "title": "Protection Systems",
+          "category": "Electrical Design",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "autocad-electrical",
+          "title": "AutoCAD Electrical",
+          "category": "Design Tools",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "etap",
+          "title": "ETAP",
+          "category": "Design Tools",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "plc-scada",
+          "title": "PLC and SCADA",
+          "category": "Automation",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "electrical-system-design",
+          "title": "Electrical System Design",
+          "category": "Electrical Design",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "substation-design",
+          "title": "Substation Design",
+          "category": "Electrical Design",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 360
+        }
+      ]
+    },
+    "software-developer": {
+      "faculty": "Engineering",
+      "branch": "CSE / IT",
+      "targetRole": "Software Developer",
+      "courses": [
+        {
+          "nodeKey": "programming-foundations",
+          "title": "Programming Foundations",
+          "category": "Programming",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "data-structures",
+          "title": "Data Structures and Algorithms",
+          "category": "Computer Science",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 480
+        },
+        {
+          "nodeKey": "databases",
+          "title": "Databases and SQL",
+          "category": "Backend",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "web-fundamentals",
+          "title": "Web Fundamentals",
+          "category": "Web",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "java-spring",
+          "title": "Java and Spring Boot",
+          "category": "Backend",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 600
+        },
+        {
+          "nodeKey": "react",
+          "title": "React",
+          "category": "Frontend",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "testing",
+          "title": "Software Testing",
+          "category": "Quality",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "devops-basics",
+          "title": "DevOps Basics",
+          "category": "Delivery",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        }
+      ]
+    },
+    "vlsi-design-engineer": {
+      "faculty": "Engineering",
+      "branch": "ECE / EEE",
+      "targetRole": "VLSI Design Engineer",
+      "courses": [
+        {
+          "nodeKey": "digital-electronics",
+          "title": "Digital Electronics",
+          "category": "Electronics Core",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "cmos",
+          "title": "CMOS Fundamentals",
+          "category": "VLSI",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "verilog",
+          "title": "Verilog HDL",
+          "category": "VLSI",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "systemverilog",
+          "title": "SystemVerilog",
+          "category": "Verification",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "rtl-design",
+          "title": "RTL Design",
+          "category": "VLSI",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 480
+        },
+        {
+          "nodeKey": "sta",
+          "title": "Static Timing Analysis",
+          "category": "VLSI",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "physical-design",
+          "title": "Physical Design",
+          "category": "VLSI",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 480
+        },
+        {
+          "nodeKey": "verification",
+          "title": "Functional Verification",
+          "category": "Verification",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 480
+        }
+      ]
+    },
+    "mechanical-design-engineer": {
+      "faculty": "Engineering",
+      "branch": "Mechanical Engineering",
+      "targetRole": "Mechanical Design Engineer",
+      "courses": [
+        {
+          "nodeKey": "engineering-mechanics",
+          "title": "Engineering Mechanics",
+          "category": "Mechanical Core",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "strength-materials",
+          "title": "Strength of Materials",
+          "category": "Mechanical Core",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "machine-design",
+          "title": "Machine Design",
+          "category": "Design",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 480
+        },
+        {
+          "nodeKey": "cad",
+          "title": "CAD Modelling",
+          "category": "Design Tools",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "solidworks",
+          "title": "SolidWorks",
+          "category": "Design Tools",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "fea",
+          "title": "Finite Element Analysis",
+          "category": "Simulation",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "manufacturing",
+          "title": "Manufacturing Processes",
+          "category": "Manufacturing",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "gd-t",
+          "title": "GD&T",
+          "category": "Design",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        }
+      ]
+    },
+    "civil-design-engineer": {
+      "faculty": "Engineering",
+      "branch": "Civil Engineering",
+      "targetRole": "Civil Design Engineer",
+      "courses": [
+        {
+          "nodeKey": "engineering-drawing",
+          "title": "Engineering Drawing",
+          "category": "Civil Core",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "structural-analysis",
+          "title": "Structural Analysis",
+          "category": "Structures",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "rcc",
+          "title": "RCC Design",
+          "category": "Structures",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "steel-design",
+          "title": "Steel Design",
+          "category": "Structures",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "autocad-civil",
+          "title": "AutoCAD Civil",
+          "category": "Design Tools",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "staad-pro",
+          "title": "STAAD.Pro",
+          "category": "Design Tools",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "quantity-survey",
+          "title": "Quantity Surveying",
+          "category": "Construction",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "project-planning",
+          "title": "Construction Project Planning",
+          "category": "Construction",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        }
+      ]
+    },
+    "bca-full-stack-developer": {
+      "faculty": "Computer Applications",
+      "branch": "BCA",
+      "targetRole": "Full Stack Developer",
+      "courses": [
+        {
+          "nodeKey": "computer-fundamentals",
+          "title": "Computer Fundamentals",
+          "category": "Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 180
+        },
+        {
+          "nodeKey": "c-programming",
+          "title": "C Programming",
+          "category": "Programming",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "oop-java",
+          "title": "OOP with Java",
+          "category": "Programming",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "dbms-sql",
+          "title": "DBMS and SQL",
+          "category": "Database",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "html-css-js",
+          "title": "HTML CSS JavaScript",
+          "category": "Frontend",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 480
+        },
+        {
+          "nodeKey": "react-bca",
+          "title": "React",
+          "category": "Frontend",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "spring-boot-bca",
+          "title": "Spring Boot",
+          "category": "Backend",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 480
+        },
+        {
+          "nodeKey": "fullstack-project",
+          "title": "Full Stack Integration",
+          "category": "Application",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 420
+        }
+      ]
+    },
+    "mba-marketing-manager": {
+      "faculty": "MBA",
+      "branch": "Marketing",
+      "targetRole": "Marketing Manager",
+      "courses": [
+        {
+          "nodeKey": "marketing-fundamentals",
+          "title": "Marketing Fundamentals",
+          "category": "Management Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "consumer-behaviour",
+          "title": "Consumer Behaviour",
+          "category": "Marketing",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "market-research",
+          "title": "Market Research",
+          "category": "Marketing",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "segmentation-positioning",
+          "title": "Segmentation and Positioning",
+          "category": "Strategy",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "brand-management",
+          "title": "Brand Management",
+          "category": "Marketing",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "digital-marketing",
+          "title": "Digital Marketing",
+          "category": "Digital",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "seo-sem",
+          "title": "SEO and SEM",
+          "category": "Digital",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "marketing-analytics",
+          "title": "Marketing Analytics",
+          "category": "Analytics",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "campaign-management",
+          "title": "Campaign Management",
+          "category": "Operations",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        }
+      ]
+    },
+    "mba-finance-analyst": {
+      "faculty": "MBA",
+      "branch": "Finance",
+      "targetRole": "Finance Analyst",
+      "courses": [
+        {
+          "nodeKey": "accounting-managers",
+          "title": "Accounting for Managers",
+          "category": "Finance Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "corporate-finance",
+          "title": "Corporate Finance",
+          "category": "Finance",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "financial-markets",
+          "title": "Financial Markets",
+          "category": "Finance",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "financial-modelling",
+          "title": "Financial Modelling in Excel",
+          "category": "Analytics",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "valuation",
+          "title": "Business Valuation",
+          "category": "Finance",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "risk-management",
+          "title": "Financial Risk Management",
+          "category": "Risk",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "powerbi-finance",
+          "title": "Power BI for Finance",
+          "category": "Analytics",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "investment-analysis",
+          "title": "Investment Analysis",
+          "category": "Finance",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 360
+        }
+      ]
+    },
+    "mba-hr-manager": {
+      "faculty": "MBA",
+      "branch": "Human Resources",
+      "targetRole": "HR Manager",
+      "courses": [
+        {
+          "nodeKey": "ob",
+          "title": "Organizational Behaviour",
+          "category": "Management Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "hrm",
+          "title": "Human Resource Management",
+          "category": "HR",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "talent-acquisition",
+          "title": "Talent Acquisition",
+          "category": "HR",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "learning-development",
+          "title": "Learning and Development",
+          "category": "HR",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "performance-management",
+          "title": "Performance Management",
+          "category": "HR",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "labour-law",
+          "title": "Labour Law and Compliance",
+          "category": "Compliance",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "hr-analytics",
+          "title": "HR Analytics",
+          "category": "Analytics",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "employee-relations",
+          "title": "Employee Relations",
+          "category": "HR",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        }
+      ]
+    },
+    "mba-business-analyst": {
+      "faculty": "MBA",
+      "branch": "Business Analytics",
+      "targetRole": "Business Analyst",
+      "courses": [
+        {
+          "nodeKey": "business-statistics",
+          "title": "Business Statistics",
+          "category": "Analytics Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "excel-analytics",
+          "title": "Excel for Analytics",
+          "category": "Analytics",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "sql-business",
+          "title": "SQL for Business",
+          "category": "Analytics",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "powerbi-business",
+          "title": "Power BI",
+          "category": "Analytics",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "requirements",
+          "title": "Requirements Analysis",
+          "category": "Business Analysis",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "process-modelling",
+          "title": "Process Modelling",
+          "category": "Business Analysis",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "agile-ba",
+          "title": "Agile Business Analysis",
+          "category": "Delivery",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "business-case",
+          "title": "Business Case Development",
+          "category": "Strategy",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        }
+      ]
+    },
+    "bba-business-development": {
+      "faculty": "BBA",
+      "branch": "General Management",
+      "targetRole": "Business Development Executive",
+      "courses": [
+        {
+          "nodeKey": "management-principles",
+          "title": "Principles of Management",
+          "category": "Management Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "business-communication",
+          "title": "Business Communication",
+          "category": "Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "sales-fundamentals",
+          "title": "Sales Fundamentals",
+          "category": "Sales",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "market-research-bba",
+          "title": "Market Research",
+          "category": "Marketing",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "crm-bba",
+          "title": "CRM Fundamentals",
+          "category": "Operations",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "negotiation",
+          "title": "Negotiation Skills",
+          "category": "Sales",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "business-analytics-bba",
+          "title": "Business Analytics Basics",
+          "category": "Analytics",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "account-management",
+          "title": "Account Management",
+          "category": "Sales",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        }
+      ]
+    },
+    "bcom-accountant": {
+      "faculty": "Commerce",
+      "branch": "BCom",
+      "targetRole": "Accountant",
+      "courses": [
+        {
+          "nodeKey": "accounting-principles",
+          "title": "Accounting Principles",
+          "category": "Accounting Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "journal-ledger",
+          "title": "Journal and Ledger",
+          "category": "Accounting",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "trial-balance",
+          "title": "Trial Balance",
+          "category": "Accounting",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "financial-statements",
+          "title": "Financial Statements",
+          "category": "Accounting",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "cost-accounting",
+          "title": "Cost Accounting",
+          "category": "Accounting",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "taxation-gst",
+          "title": "Taxation and GST",
+          "category": "Compliance",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "tally-erp",
+          "title": "Tally / ERP Accounting",
+          "category": "Tools",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "excel-accounting",
+          "title": "Excel for Accounting",
+          "category": "Tools",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "audit-basics",
+          "title": "Audit Fundamentals",
+          "category": "Audit",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        }
+      ]
+    },
+    "bsc-data-analyst": {
+      "faculty": "Science",
+      "branch": "BSc / Statistics / Mathematics",
+      "targetRole": "Data Analyst",
+      "courses": [
+        {
+          "nodeKey": "statistics-foundations",
+          "title": "Statistics Foundations",
+          "category": "Data Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "excel-data",
+          "title": "Excel for Data Analysis",
+          "category": "Analytics",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "sql-data",
+          "title": "SQL for Analysis",
+          "category": "Analytics",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "python-data",
+          "title": "Python for Data Analysis",
+          "category": "Analytics",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "pandas-eda",
+          "title": "Pandas and EDA",
+          "category": "Analytics",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 420
+        },
+        {
+          "nodeKey": "powerbi-data",
+          "title": "Power BI",
+          "category": "Visualization",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "data-storytelling",
+          "title": "Data Storytelling",
+          "category": "Communication",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "forecasting",
+          "title": "Forecasting Basics",
+          "category": "Analytics",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        }
+      ]
+    },
+    "arts-digital-content": {
+      "faculty": "Arts & Humanities",
+      "branch": "BA",
+      "targetRole": "Digital Content Specialist",
+      "courses": [
+        {
+          "nodeKey": "communication-arts",
+          "title": "Communication Fundamentals",
+          "category": "Foundation",
+          "difficulty": "FOUNDATION",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "research-methods",
+          "title": "Research Methods",
+          "category": "Research",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "content-writing",
+          "title": "Content Writing",
+          "category": "Content",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 360
+        },
+        {
+          "nodeKey": "visual-storytelling",
+          "title": "Visual Storytelling",
+          "category": "Content",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "social-media",
+          "title": "Social Media Strategy",
+          "category": "Digital",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 300
+        },
+        {
+          "nodeKey": "seo-content",
+          "title": "SEO for Content",
+          "category": "Digital",
+          "difficulty": "INTERMEDIATE",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "content-analytics",
+          "title": "Content Analytics",
+          "category": "Analytics",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 240
+        },
+        {
+          "nodeKey": "portfolio-content",
+          "title": "Digital Portfolio Development",
+          "category": "Portfolio",
+          "difficulty": "ADVANCED",
+          "durationMinutes": 300
+        }
+      ]
+    }
+  }
+}

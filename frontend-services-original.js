@@ -1,0 +1,10 @@
+import{api}from"./client";
+export const auth={register:x=>api.post("/auth/register",x),login:x=>api.post("/auth/login",x),mfa:(id,otp)=>api.post(`/auth/mfa/${id}/${otp}`),validate:()=>api.post("/auth/validate"),reauth:(id,p)=>api.post(`/auth/reauth/${id}`,null,{params:{password:p}}),resetDevice:id=>api.delete(`/auth/admin/students/${id}/device`)};
+export const students={save:x=>api.post("/student/students",x),one:id=>api.get(`/student/students/${id}`),college:id=>api.get(`/student/students/college/${id}`),verify:(id,a)=>api.put(`/student/students/${id}/verify`,null,{params:{approved:a}})};
+export const roadmaps={generate:x=>api.post("/roadmap/roadmaps/generate",x),all:id=>api.get(`/roadmap/roadmaps/${id}`),progress:(id,v,p)=>api.put(`/roadmap/roadmaps/${id}/${v}/progress`,null,{params:{value:p}})};
+export const learning={courses:()=>api.get("/learning/learning/courses"),add:x=>api.post("/learning/learning/admin/courses",x),progress:x=>api.post("/learning/learning/progress",x),student:id=>api.get(`/learning/learning/progress/${id}`)};
+export const interviews={start:(studentId,round)=>api.post("/interview/interviews/start",null,{params:{studentId,round}}),submit:(id,score,weaknesses)=>api.post(`/interview/interviews/${id}/submit`,null,{params:{score,weaknesses}}),history:id=>api.get(`/interview/interviews/student/${id}`)};
+export const placement={job:x=>api.post("/placement/placement/jobs",x),apply:x=>api.post("/placement/placement/applications",x),move:(id,n)=>api.put(`/placement/placement/applications/${id}/${n}`),offer:x=>api.post("/placement/placement/offers",x)};
+export const recruiters={search:p=>api.get("/recruiter/recruiter/candidates",{params:p}),add:x=>api.post("/recruiter/recruiter/candidates",x),export:ids=>api.post("/recruiter/recruiter/export",ids)};
+export const notifications={send:x=>api.post("/notification/notifications",x),user:id=>api.get(`/notification/notifications/${id}`)};
+export const admin={settings:()=>api.get("/admin/admin/settings"),set:(k,v)=>api.put(`/admin/admin/settings/${k}`,null,{params:{value:v}}),audit:()=>api.get("/admin/admin/audit")};

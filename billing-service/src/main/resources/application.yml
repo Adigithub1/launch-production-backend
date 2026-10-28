@@ -1,0 +1,43 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: billing-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: SamRad26@@$$
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: false
+
+eureka:
+  client:
+    enabled: false
+    register-with-eureka: false
+    fetch-registry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+razorpay:
+  key-id: rzp_test_ToF4j43YwBlrh1
+  key-secret: xipGzVhsDrOO1JobrXuwAQqy
+  webhook-secret: ToEtO4O7dKm2JU
+
+launch:
+  auth-service-url: http://localhost:8081

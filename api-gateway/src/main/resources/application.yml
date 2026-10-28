@@ -1,0 +1,40 @@
+server: {port: 8080}
+spring:
+  application: {name: api-gateway}
+  cloud:
+    gateway:
+      routes:
+        - id: auth-service
+          uri: lb://auth-service
+          predicates: [Path=/auth/**]
+        - id: student-service
+          uri: lb://student-service
+          predicates: [Path=/student/**]
+        - id: billing-service
+          uri: lb://billing-service
+          predicates: [Path=/billing/**]
+        - id: learning-service
+          uri: lb://learning-service
+          predicates: [Path=/learning/**]
+        - id: roadmap-service
+          uri: lb://roadmap-service
+          predicates: [Path=/roadmap/**]
+        - id: assessment-service
+          uri: lb://assessment-service
+          predicates: [Path=/assessment/**]
+        - id: interview-service
+          uri: lb://interview-service
+          predicates: [Path=/interview/**]
+        - id: project-service
+          uri: lb://project-service
+          predicates: [Path=/project/**]
+        - id: placement-service
+          uri: lb://placement-service
+          predicates: [Path=/placement/**]
+        - id: notification-service
+          uri: lb://notification-service
+          predicates: [Path=/notification/**]
+        - id: admin-service
+          uri: lb://admin-service
+          predicates: [Path=/admin/**]
+eureka.client.service-url.defaultZone: "${EUREKA_URL:http://localhost:8761/eureka}"

@@ -1,0 +1,54 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: learning-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: SamRad26@@$$
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: false
+
+eureka:
+  client:
+    enabled: false
+    register-with-eureka: false
+    fetch-registry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+launch:
+  jwt:
+    secret: bGF1bmNoLXN1cGVyLXNlY3VyZS1qd3Qta2V5LTIwMjYtMTIzNDU2Nzg5
+    expiration-seconds: 3600
+
+  frontend-origin: http://localhost:5173
+
+kafka:
+  bootstrap-servers: localhost:9092
+
+  consumer:
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    auto-offset-reset: earliest
+    enable-auto-commit: false
+
+  listener:
+    ack-mode: record
