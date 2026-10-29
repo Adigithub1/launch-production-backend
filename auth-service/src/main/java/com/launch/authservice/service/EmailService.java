@@ -1,36 +1,57 @@
 package com.launch.authservice.service;
 
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import com.resend.Resend;
+import com.resend.core.exception.ResendException;
+import com.resend.services.emails.model.CreateEmailOptions;
 
 @Service
 public class EmailService {
 
-    private final JavaMailSender sender;
+    private final Resend resend;
+    private final String fromEmail;
 
-    public EmailService(JavaMailSender sender) {
-        this.sender = sender;
+    public EmailService(
+            @Value("${resend.api-key}") String apiKey,
+            @Value("${resend.from-email}") String fromEmail) {
+
+        this.resend = new Resend(apiKey);
+        this.fromEmail = fromEmail;
     }
 
-    public void sendOtp(String email, String otp) {
+    public void sendOtp(String toEmail, String otp) {
 
-        System.out.println("Sending OTP to: " + email);
-        System.out.println("OTP generated: " + otp);
+        CreateEmailOptions email = CreateEmailOptions.builder()
+                .from(fromEmail)
+                .to(toEmail)
+                .subject("LAUNCH Verification Code")
+                .html("""
+                    <div style="font-family: Arial, sans-serif;">
+                        <h2>LAUNCH Verification</h2>
 
-        SimpleMailMessage message = new SimpleMailMessage();
+                        <p>Your verification code is:</p>
 
-        message.setTo(email);
-        message.setSubject("Verify your LAUNCH account");
+                        <h1>%s</h1>
 
-        message.setText(
-                "Your LAUNCH verification code is "
-                        + otp
-                        + ". It expires in 5 minutes."
-        );
+                        <p>This code expires in 5 minutes.</p>
 
-        sender.send(message);
+                        <p>If you did not request this code, ignore this email.</p>
+                    </div>
+                    """.formatted(otp))
+                .build();
 
-        System.out.println("EMAIL SENT SUCCESSFULLY");
+        try {
+
+            resend.emails().send(email);
+
+        } catch (ResendException e) {
+
+            throw new IllegalStateException(
+                    "Unable to send OTP email",
+                    e
+            );
+        }
     }
 }
