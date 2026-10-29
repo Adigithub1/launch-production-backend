@@ -1,3 +1,6 @@
+server:
+  port: ${PORT:8081}
+
 spring:
   application:
     name: auth-service
@@ -12,13 +15,44 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
 
   flyway:
     enabled: false
 
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: ${MAIL_USERNAME}
+#    password: ${MAIL_PASSWORD}
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#          connectiontimeout: 5000
+#          timeout: 5000
+#          writetimeout: 5000
+
 resend:
   api-key: ${RESEND_API_KEY}
   from-email: ${RESEND_FROM_EMAIL:onboarding@resend.dev}
+
+
+eureka:
+  client:
+    enabled: false
+    register-with-eureka: false
+    fetch-registry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
 
 launch:
   jwt:
