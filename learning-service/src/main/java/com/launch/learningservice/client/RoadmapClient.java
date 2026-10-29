@@ -13,7 +13,8 @@ public class RoadmapClient {
 
     public RoadmapClient(
             RestClient.Builder builder,
-            @Value("${services.roadmap.base-url:http://localhost:8085}")
+            //@Value("${services.roadmap.base-url:http://localhost:8085}")
+            @Value("${services.roadmap.base-url:https://launch-roadmap-service.onrender.com}")
             String roadmapBaseUrl) {
 
         this.restClient = builder
