@@ -59,4 +59,4 @@ launch:
     secret: ${JWT_SECRET}
     expiration-seconds: 3600
 
-  frontend-origin: ${FRONTEND_ORIGIN:http://localhost:5173}
+  frontend-origin: ${FRONTEND_ORIGIN:https://launch-2csikrxc5-adigithub1.vercel.app}
