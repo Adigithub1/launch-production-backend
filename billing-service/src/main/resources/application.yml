@@ -1,23 +1,67 @@
+#server:
+#  port: 8083
+#
+#spring:
+#  application:
+#    name: billing-service
+#
+#  datasource:
+#	url: ${DB_URL}
+#	username: ${DB_USERNAME}
+#	password: ${DB_PASSWORD}
+#	driver-class-name: org.postgresql.Driver
+#	
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#
+#  flyway:
+#    enabled: false
+#
+#eureka:
+#  client:
+#    enabled: false
+#    register-with-eureka: false
+#    fetch-registry: false
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info
+#
+#razorpay:
+#  key-id: rzp_test_ToF4j43YwBlrh1
+#  key-secret: xipGzVhsDrOO1JobrXuwAQqy
+#  webhook-secret: ToEtO4O7dKm2JU
+#
+#launch:
+#  auth-service-url: http://localhost:8081
+
 server:
-  port: 8083
+  port: ${PORT:8083}
 
 spring:
   application:
     name: billing-service
 
   datasource:
-	url: ${DB_URL}
-	username: ${DB_USERNAME}
-	password: ${DB_PASSWORD}
-	driver-class-name: org.postgresql.Driver
-	
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
-        format_sql: true
+        format_sql: false
 
   flyway:
     enabled: false
@@ -35,9 +79,9 @@ management:
         include: health,info
 
 razorpay:
-  key-id: rzp_test_ToF4j43YwBlrh1
-  key-secret: xipGzVhsDrOO1JobrXuwAQqy
-  webhook-secret: ToEtO4O7dKm2JU
+  key-id: ${RAZORPAY_KEY_ID}
+  key-secret: ${RAZORPAY_KEY_SECRET}
+  webhook-secret: ${RAZORPAY_WEBHOOK_SECRET}
 
 launch:
-  auth-service-url: http://localhost:8081
+  auth-service-url: ${AUTH_SERVICE_URL:http://localhost:8081}

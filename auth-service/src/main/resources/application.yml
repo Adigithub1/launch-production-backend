@@ -1,5 +1,66 @@
+#server:
+#  port: 8081
+#
+#spring:
+#  application:
+#    name: auth-service
+#
+#  datasource:
+#    url: ${DB_URL}
+#    username: ${DB_USERNAME}
+#    password: ${DB_PASSWORD}
+#    driver-class-name: org.postgresql.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#
+#  flyway:
+#    enabled: false
+#
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    #username: adityakakde11@gmail.com
+#    #password: vrvj ukph xyml bvyu
+#
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#
+#          starttls:
+#            enable: true
+#
+#          connectiontimeout: 5000
+#          timeout: 5000
+#          writetimeout: 5000
+#
+#eureka:
+#  client:
+#    enabled: false
+#    register-with-eureka: false
+#    fetch-registry: false
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info
+#
+#launch:
+#  jwt:
+#    #secret: bGF1bmNoLXN1cGVyLXNlY3VyZS1qd3Qta2V5LTIwMjYtMTIzNDU2Nzg5
+#    expiration-seconds: 3600
+#
+#  frontend-origin: http://localhost:5173
+
 server:
-  port: 8081
+  port: ${PORT:8081}
 
 spring:
   application:
@@ -14,10 +75,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
-        format_sql: true
+        format_sql: false
 
   flyway:
     enabled: false
@@ -25,17 +86,15 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: adityakakde11@gmail.com
-    password: vrvj ukph xyml bvyu
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
 
     properties:
       mail:
         smtp:
           auth: true
-
           starttls:
             enable: true
-
           connectiontimeout: 5000
           timeout: 5000
           writetimeout: 5000
@@ -54,7 +113,7 @@ management:
 
 launch:
   jwt:
-    secret: bGF1bmNoLXN1cGVyLXNlY3VyZS1qd3Qta2V5LTIwMjYtMTIzNDU2Nzg5
+    secret: ${JWT_SECRET}
     expiration-seconds: 3600
 
-  frontend-origin: http://localhost:5173
+  frontend-origin: ${FRONTEND_ORIGIN:http://localhost:5173}
