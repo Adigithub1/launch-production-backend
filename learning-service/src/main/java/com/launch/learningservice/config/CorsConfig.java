@@ -1,12 +1,10 @@
 package com.launch.learningservice.config;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class CorsConfig {
@@ -15,23 +13,17 @@ public class CorsConfig {
 	private String frontendOrigin;
 
 	@Bean
-	public UrlBasedCorsConfigurationSource corsConfigurationSource() {
+	public WebMvcConfigurer corsConfigurer() {
 
-		CorsConfiguration config = new CorsConfiguration();
+		return new WebMvcConfigurer() {
 
-		config.setAllowedOrigins(List.of(frontendOrigin));
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
 
-		config.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
-
-		config.setAllowedHeaders(List.of("*"));
-		config.setExposedHeaders(List.of("Authorization"));
-		config.setAllowCredentials(true);
-		config.setMaxAge(3600L);
-
-		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-
-		source.registerCorsConfiguration("/**", config);
-
-		return source;
+				registry.addMapping("/**").allowedOrigins(frontendOrigin)
+						.allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS").allowedHeaders("*")
+						.exposedHeaders("Authorization").allowCredentials(true).maxAge(3600);
+			}
+		};
 	}
 }
