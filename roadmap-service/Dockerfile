@@ -7,10 +7,13 @@ COPY src ./src
 
 RUN mvn clean package -DskipTests
 
+
 FROM eclipse-temurin:17-jre
 
 WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
+
+COPY src/main/resources/kafka/client.truststore.jks /app/client.truststore.jks
 
 ENTRYPOINT ["java", "-jar", "app.jar"]

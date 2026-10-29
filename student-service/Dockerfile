@@ -13,4 +13,6 @@ WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
 
+COPY src/main/resources/kafka/client.truststore.jks /app/client.truststore.jks
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
