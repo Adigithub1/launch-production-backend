@@ -15,7 +15,7 @@ public class CorsConfig {
 
 		CorsConfiguration config = new CorsConfiguration();
 
-		config.setAllowedOriginPatterns(List.of("https://launch-2csikrxc5-adigithub1.vercel.app",
+		config.setAllowedOriginPatterns(List.of("https://launch-kbia1ye8n-adigithub1.vercel.app",
 				"https://launch-*.vercel.app", "http://localhost:*"));
 
 		config.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));

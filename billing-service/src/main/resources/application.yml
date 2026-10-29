@@ -41,4 +41,4 @@ razorpay:
 
 launch:
   auth-service-url: ${AUTH_SERVICE_URL:http://localhost:8081}
-  frontend-origin: ${FRONTEND_ORIGIN:https://launch-2csikrxc5-adigithub1.vercel.app}
+  frontend-origin: ${FRONTEND_ORIGIN:https://launch-kbia1ye8n-adigithub1.vercel.app}
