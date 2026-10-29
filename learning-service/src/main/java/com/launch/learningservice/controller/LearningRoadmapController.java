@@ -9,7 +9,6 @@ import com.launch.learningservice.service.TopicContentService;
 
 @RestController
 @RequestMapping("/api/learning/students/{studentId}")
-@CrossOrigin(origins = "http://localhost:5173")
 public class LearningRoadmapController {
 
     private final LearningSyncService sync;
