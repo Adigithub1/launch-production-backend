@@ -1,33 +1,51 @@
 package com.launch.tpo.config;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.cors.CorsConfigurationSource;
-
-import java.util.List;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 @Configuration
 public class CorsConfig {
 
-	@Bean
-	public CorsConfigurationSource corsConfigurationSource() {
+    @Value("${launch.frontend-origin}")
+    private String frontendOrigin;
 
-		CorsConfiguration config = new CorsConfiguration();
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
 
-		config.setAllowedOrigins(List.of("http://localhost:5173"));
+        CorsConfiguration config = new CorsConfiguration();
 
-		config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        config.setAllowedOrigins(List.of(frontendOrigin));
 
-		config.setAllowedHeaders(List.of("*"));
+        config.setAllowedMethods(
+                List.of(
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "DELETE",
+                        "PATCH",
+                        "OPTIONS"
+                )
+        );
 
-		config.setAllowCredentials(true);
+        config.setAllowedHeaders(List.of("*"));
 
-		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        config.setExposedHeaders(List.of("Authorization"));
 
-		source.registerCorsConfiguration("/**", config);
+        config.setAllowCredentials(true);
 
-		return source;
-	}
+        config.setMaxAge(3600L);
+
+        UrlBasedCorsConfigurationSource source =
+                new UrlBasedCorsConfigurationSource();
+
+        source.registerCorsConfiguration("/**", config);
+
+        return source;
+    }
 }
